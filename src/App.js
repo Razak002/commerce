@@ -4,12 +4,16 @@ import Dashboard from './componenets/Dashboard';
 import Cart from './componenets/Cart';
 import RootLayout from './componenets/RootLayout';
 import './App.css'
+import Explore from './componenets/Explore';
 
 function App() {
-
+//react dom update on creating a route
   const router = createBrowserRouter(createRoutesFromElements(
+    //this will show the dashboard index route
     <Route path='/' element={<RootLayout />}>
-      <Route index element={<Dashboard />}></Route>
+      {/* //this will dive dip into the componenets */}
+      
+      <Route index element={<Dashboard/>}></Route>
       <Route path='/cart' element={<Cart />}></Route>
     </Route>
   ))
@@ -17,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      {/* //to render our routing */}
       <RouterProvider router={router} />
     </div>
   );

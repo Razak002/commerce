@@ -9,11 +9,12 @@ const NavbarPanel = () => {
 
 const cartProducts = useSelector(state => state.cart);
 
-  return (
 
+//bootstrap navbaar
+  return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Razak's Store</Navbar.Brand>
+        <Navbar.Brand href="#" style={{fontFamily: 'cursive'}}>🏪Razak's Store</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,12 +22,12 @@ const cartProducts = useSelector(state => state.cart);
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link to="/" as={Link}>Products</Nav.Link>
+            <Nav.Link to="/" as={Link}>Explore our Products</Nav.Link>
           </Nav>
           <Navbar.Toggle />
           <Navbar.Collapse className='justify-content-end'>
             <Navbar.Text>
-            <Nav.Link to="/cart" as={Link}>My Bag {cartProducts.length}</Nav.Link>
+            <Nav.Link to="/cart" as={Link}>🛍️ My Bag {cartProducts.length}</Nav.Link>
             </Navbar.Text>
           </Navbar.Collapse>
 

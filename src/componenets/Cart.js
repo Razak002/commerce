@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { remove } from '../store/cartSlice'
+import Payment from './Payment'
 
 
 const Cart = () => {
@@ -30,10 +31,14 @@ const Cart = () => {
             </Card.Text>
           </Card.Body>
 
-          <Card.Footer style={{ backgroundColor: 'white' }}>
-            <Button variant="danger" onClick={() => removeToCart(product.id)}>Remove Item</Button>
+          <Card.Footer style={{ backgroundColor: 'white'}}>
+            <Button variant="danger" onClick={() => removeToCart(product.id)} style={{ marginRight: '20px' }}>Remove Item</Button>
+            <Button variant="primary" onClick={() => removeToCart(product.id)}>Pay for Item</Button>
+           
           </Card.Footer>
+
         </Card>
+        <Payment />
       </div>
     )
   })
