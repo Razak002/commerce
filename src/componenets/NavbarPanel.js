@@ -18,7 +18,7 @@ const NavbarPanel = () => {
         <Navbar.Brand href="#" style={{ fontFamily: 'cursive' }} className='text-xl font-bold'>
           <div className='flex gap-1 items-center'>
             <img src={images.mall} alt='' className='w-10' />
-            <span>Razak's <span className='text-blue-600'>Store</span></span>
+            <span>Razak's <span className='text-blue-600'>Mall</span></span>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

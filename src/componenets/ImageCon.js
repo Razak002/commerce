@@ -13,6 +13,8 @@ import bbag from '../assets/bbag.png'
 import order from '../assets/order.png'
 import quality from '../assets/quality.png'
 import security from '../assets/security.png'
+import twit from '../assets/twit.png'
+import deliver from '../assets/deliver.png'
 
 
 
@@ -34,7 +36,9 @@ const images = {
     bbag,
     order,
     quality,
-    security
+    security,
+    twit,
+    deliver
 }
 
 export default images

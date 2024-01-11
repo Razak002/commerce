@@ -3,6 +3,7 @@ import images from './ImageCon'
 import Item from './Item'
 import Features from './Features'
 import { Link } from 'react-router-dom'
+import ContactUs from './ContactUs'
 
 
 
@@ -25,9 +26,9 @@ const Explore = () => {
 
 
           <div className='py-6'>
-            <button className='p-2 px-4 border-2  border-blue-600 rounded-2xl font-semibold'>
+            <button className='p-2 px-4 border-2  border-blue-600 rounded-2xl'>
               <Link to='/dashboard'>
-              Explore <span className='text-blue-600 font-semibold'>more</span>
+              Explore <span className='text-blue-600 '>more</span>
               </Link>
               
               </button>
@@ -44,6 +45,8 @@ const Explore = () => {
        <Item />
      
       <Features />
+
+      <ContactUs />
       </div> 
 
     </div>
