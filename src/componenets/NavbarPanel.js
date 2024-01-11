@@ -4,17 +4,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import images from './ImageCon';
 
 const NavbarPanel = () => {
 
-const cartProducts = useSelector(state => state.cart);
+  const cartProducts = useSelector(state => state.cart);
 
 
-//bootstrap navbaar
+  //bootstrap navbaar
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" style={{fontFamily: 'cursive'}}>🏪Razak's Store</Navbar.Brand>
+        <Navbar.Brand href="#" style={{ fontFamily: 'cursive' }} className='text-xl font-bold'>
+          <div className='flex gap-1 items-center'>
+            <img src={images.mall} alt='' className='w-10' />
+            <span>Razak's <span className='text-blue-600'>Store</span></span>
+          </div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -22,12 +28,20 @@ const cartProducts = useSelector(state => state.cart);
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link to="/" as={Link}>Explore our Products</Nav.Link>
+            <Nav.Link to="/" as={Link} className='text-sm font-serif mt-2'>Explore our Products</Nav.Link>
           </Nav>
           <Navbar.Toggle />
           <Navbar.Collapse className='justify-content-end'>
             <Navbar.Text>
-            <Nav.Link to="/cart" as={Link}>🛍️ My Bag {cartProducts.length}</Nav.Link>
+              <Nav.Link to="/cart" as={Link} >
+                <div className='flex gap-1 items-center'>
+                  <img src={images.bbag} alt='' className='w-8' />
+
+                  <span>{cartProducts.length} checkout</span>
+                </div>
+
+
+              </Nav.Link>
             </Navbar.Text>
           </Navbar.Collapse>
 

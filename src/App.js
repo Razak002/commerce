@@ -8,15 +8,18 @@ import Explore from './componenets/Explore';
 
 function App() {
 //react dom update on creating a route
-  const router = createBrowserRouter(createRoutesFromElements(
-    //this will show the dashboard index route
-    <Route path='/' element={<RootLayout />}>
-      {/* //this will dive dip into the componenets */}
-      
-      <Route index element={<Dashboard/>}></Route>
-      <Route path='/cart' element={<Cart />}></Route>
-    </Route>
-  ))
+const router = createBrowserRouter(createRoutesFromElements(
+  //this will show the dashboard index route
+  <Route path='/' element={<RootLayout />}>
+    {/* //this will dive dip into the componenets */}
+    
+    {/* Dashboard */}
+    <Route index element={<Explore/>}></Route>
+    <Route path='/cart' element={<Cart />}></Route>
+    <Route path='/dashboard' element={<Dashboard />}></Route>
+    
+  </Route>
+))
 
 
   return (
