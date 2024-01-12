@@ -1,7 +1,11 @@
 import React from 'react';
 import images from './ImageCon';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Item = () => {
+
+  const notify = () => toast("check ur mailBox");
 
   return (
     <div>
@@ -25,7 +29,8 @@ const Item = () => {
               <div className=' flex flex-col md:flex-row justify-between px-3'>
                 <div>
 
-                  <button type='submit' className='uppercase p-1 px-4 text-[0.8rem] font-semibold border rounded-md bg-blue-600 text-white'>buy now</button>
+                  <button type='submit' onClick={notify} className='uppercase p-1 px-4 text-[0.8rem] font-semibold border rounded-md bg-blue-600 text-white'>buy now</button>
+                  <ToastContainer />
                   <img src={images.love} alt='' width={20} className='hidden md:block' />
                 </div>
                 <div>
