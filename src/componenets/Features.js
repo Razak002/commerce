@@ -6,7 +6,7 @@ const Features = () => {
         <div>
             <h1 className='text-2xl font-bold'>Features</h1>
 
-            <div className='flex ml-10 md:ml-0 md:flex-row justify-center gap-10 md:gap-20 items-center'> 
+            <div className='flex ml-8 md:ml-0 md:flex-row justify-center gap-10 md:gap-20 items-center'> 
                 <div>
                     <img src={images.order } alt=''  className='w-16 md:w-32' />
                     <span className='text-[0.8rem] md:text-[1rem]'>fast ordering process</span>
@@ -20,7 +20,7 @@ const Features = () => {
 
                 <div>
                     <img src={images.quality} alt='' className='w-16 md:w-32' />
-                    <span className='text-[0.8rem] md:text-[1rem]'>High payment security</span>
+                    <span className='text-[0.8rem] md:text-[1rem]'>Enjoy Quality products</span>
                 </div>
 
                

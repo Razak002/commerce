@@ -15,6 +15,8 @@ import quality from '../assets/quality.png'
 import security from '../assets/security.png'
 import twit from '../assets/twit.png'
 import deliver from '../assets/deliver.png'
+import rating from '../assets/rating.png'
+import love from '../assets/love.png'
 
 
 
@@ -38,7 +40,9 @@ const images = {
     quality,
     security,
     twit,
-    deliver
+    deliver,
+    rating,
+    love
 }
 
 export default images
