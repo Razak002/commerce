@@ -17,10 +17,9 @@ const Explore = () => {
         <div className='md:w-[50%]'>
 
 
-          <div className='flex flex-col justify-center gap-2 text-3xl  md:text-5xl font-bold text-center md:text-left'>
-            <span className='text-blue-600 font-serif text-left'>we deals in all </span>
-            <span className='text-blue-600 font-serif text-left'>kind of tech accesories </span>
-            <span className='text-blue-600 font-serif text-left'>we've got all your orders
+          <div className='flex flex-col justify-center gap-2 text-2xl  md:text-5xl font-bold text-center md:text-left'>
+            <span className='text-blue-600 font-serif text-left'>Elevate Your Digital Realm</span>
+            <span className='text-blue-600 font-serif text-left'>Your Orders, Our Expertise!
             </span>
           </div>
 
@@ -35,7 +34,7 @@ const Explore = () => {
           </div>
         </div>
         <div className='md:w-[50%] '>
-          <img src={images.comp} alt='' className='rounded-3xl'
+          <img src={images.acess1} alt='' className='rounded-3xl'
             loading='lazy' />
         </div>
 

@@ -22,7 +22,7 @@ const Item = () => {
 
             />
             <div className='justify-start py-3'>
-              <span className='uppercase font-semibold flex  gap-3' >product info <span className='text-[0.7rem] bg-blue-600 p-1 rounded-md text-white'>NEW</span></span>
+              <span className='uppercase font-semibold flex  gap-3 text-[0.8rem] md:text-[1rem]' >product info <span className='text-[0.7rem] bg-blue-600 p-1 rounded-md text-white'>NEW</span></span>
               <hr></hr>
               <p className='text-[0.8rem] text-left'>This product aims at satisfying your need to the fullest enjoy your experience</p>
 

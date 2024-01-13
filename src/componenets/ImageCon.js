@@ -17,6 +17,10 @@ import twit from '../assets/twit.png'
 import deliver from '../assets/deliver.png'
 import rating from '../assets/rating.png'
 import love from '../assets/love.png'
+import acess from '../assets/acces.png'
+import acess1 from '../assets/acess1.png'
+
+
 
 
 
@@ -42,7 +46,9 @@ const images = {
     twit,
     deliver,
     rating,
-    love
+    love,
+    acess,
+    acess1
 }
 
 export default images
