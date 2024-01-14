@@ -11,7 +11,7 @@ const Item = () => {
     <div>
       <h1 className='uppercase text-2xl font-bold '>Some of Our items</h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5">
         {[images.istock, images.item1, images.item2, images.item3, images.item4, images.item7].map((item, index) => (
           <div
             key={index}

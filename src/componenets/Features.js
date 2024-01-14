@@ -4,12 +4,12 @@ import images from './ImageCon'
 const Features = () => {
     return (
         <div>
-            <h1 className='text-2xl font-bold'>Features</h1>
+            <h1 className='text-2xl flex justify-center font-bold'>Features</h1>
 
-            <div className='flex ml-8 md:ml-0 md:flex-row justify-center gap-10 md:gap-20 items-center'> 
+            <div className='flex  flex-col md:flex-row justify-center gap-5  items-center'> 
                 <div>
                     <img src={images.order } alt=''  className='w-16 md:w-32' />
-                    <span className='text-[0.8rem] md:text-[1rem]'>fast ordering process</span>
+                    <span className='text-[0.8rem] md:text-[1rem] '>fast ordering process</span>
 
                 </div>
                 <div>

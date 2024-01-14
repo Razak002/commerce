@@ -25,7 +25,7 @@ const Explore = () => {
 
 
           <div className='py-6'>
-            <button className='p-2 px-4 border-2  border-blue-600 rounded-2xl'>
+            <button className='p-1 px-4 border-2  border-blue-600 rounded-2xl'>
               <Link to='/dashboard'>
               Explore <span className='text-blue-600 '>more</span>
               </Link>
