@@ -16,10 +16,12 @@ const NavbarPanel = () => {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#" style={{ fontFamily: 'cursive' }} className='text-xl font-bold'>
+          <Link to='/'>
           <div className='flex gap-1 items-center'>
             <img src={images.mall} alt='' className='w-10' />
             <span>Razak's <span className='text-blue-600'>Mall</span></span>
           </div>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -28,9 +30,9 @@ const NavbarPanel = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link to="/" as={Link} className='text-sm font-serif mt-2'>Explore our Products</Nav.Link>
+            {/* <Nav.Link to="/" as={Link} className='text-sm font-serif mt-2'>Explore our Products</Nav.Link> */}
           </Nav>
-          <Navbar.Toggle />
+          {/* <Navbar.Toggle /> */}
           <Navbar.Collapse className='justify-content-end'>
             <Navbar.Text>
               <Nav.Link to="/cart" as={Link} >
