@@ -6,6 +6,7 @@ import RootLayout from './componenets/RootLayout';
 import './App.css'
 import Explore from './componenets/Explore';
 
+
 function App() {
 //react dom update on creating a route
 const router = createBrowserRouter(createRoutesFromElements(

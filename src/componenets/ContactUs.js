@@ -12,7 +12,7 @@ const ContactUs = () => {
             <div>
                 <h1>Contact Us</h1>
 
-                <p>Feel free to contact us by either filling the form or directly through our socials</p>
+                <p className='text-sm italic'>Feel free to contact us by either filling the form or directly through our socials</p>
             </div>
 
             <div className='flex justify-center flex-col md:flex-row items-center'>
@@ -23,15 +23,15 @@ const ContactUs = () => {
 
                 <div className='w-[100%] md:w-[50%]'>
                     <form className='flex flex-col space-y-3 p-5 '>
-                        <div className='border-2 border-blue-600 rounded-md '>
+                        <div className='border-2 border-white rounded-md '>
                             <input type='text' placeholder='name' className=' p-1 py-2 focus:outline-none bg-transparent text-[0.8rem] w-[100%]' />
 
                         </div>
-                        <div className='border-2 border-blue-600 rounded-md'>
+                        <div className='border-2 border-white rounded-md'>
                             <input type='Email' placeholder='Email' className='p-1 py-2 focus:outline-none bg-transparent text-[0.8rem] w-[100%]' />
 
                         </div>
-                        <div className='border-2 border-blue-600 rounded-md '>
+                        <div className='border-2 border-white rounded-md '>
                             <textarea placeholder='message' className='p-1 focus:outline-none bg-transparent text-[0.8rem] w-[100%]' >
 
                             </textarea>
@@ -41,7 +41,7 @@ const ContactUs = () => {
 
                     </form>
 
-                    <button type='submit' onClick={notify} className='py-2 px-4 rounded-2xl border-2 border-blue-600 hover:bg-blue-600 hover:text-white font-semibold '>Submit</button>
+                    <button type='submit' onClick={notify} className='bg-white text-blue-600  py-2 px-4 rounded-2xl border-2 border-blue-600 font-semibold '>Submit</button>
                     <ToastContainer />
 
                 </div>

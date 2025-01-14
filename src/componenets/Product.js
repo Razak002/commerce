@@ -1,80 +1,73 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { Button } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
+import React, { useEffect } from 'react';
+import { Button, Card, Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../store/cartSlice';
 import { getProducts } from '../store/productSlice';
-import { Alert } from 'react-bootstrap';
 
-
-//creating a product .js file first to hold alll my api products
 const Product = () => {
   const dispatch = useDispatch();
-  const { data: products, status } = useSelector(state => state.products);
-// to consume the api
+  const { data: products, status } = useSelector((state) => state.products);
+
   useEffect(() => {
-
-    // dispatch an action for fetch products
-
     dispatch(getProducts());
+  }, [dispatch]);
 
-    // fetch('https://fakestoreapi.com/products')
-    // .then(data => data.json())
-    // .then(result => getProducts(result)
+  const addToCart = (product) => {
+    dispatch(add(product));
+  };
 
-  }, []);
-
-  if (status === 'Loading') {
+  if (status === 'loading') {
     return (
-    <div>
-    <img src='./loader.gif' alt=''/>
-    </div>
-    )
+      <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <img src="./loader.gif" alt="Loading..." />
+      </div>
+    );
   }
+
   if (status === 'error') {
-    return <Alert key='danger' variant='danger'> something went wrong!!! try again later
-  </Alert >
-}
+    return (
+      <Alert key="danger" variant="danger" className="text-center">
+        Something went wrong! Please try again later.
+      </Alert>
+    );
+  }
 
-const addToCart = (product) => {
-  //dispatch action required
-  dispatch(add(product))
-}
-//maping through the product componenet and using bootstrap to display it
-const cards = products.map(product => {
   return (
-    <div className="col-md-4" style={{ marginBottom: '10px'}}>
-      <Card key={product.id} className='h-100'>
-        <div className='text-center' style={{ paddingTop: '10px'}}>
-          <Card.Img variant="top" src={product.image} style={{ width: '100px', height: '130px' }} />
-        </div>
-        <Card.Body>
-          <Card.Title>{product.title}</Card.Title>
-          <Card.Text>
-            INR: {product.price}
-          </Card.Text>
-        </Card.Body>
-
-        <Card.Footer style={{ backgroundColor: 'white' }}>
-          <Button variant="primary" onClick={() => addToCart(product)}>🛒Add To Cart</Button>
-        </Card.Footer>
-      </Card>
+    <div className="container">
+      <div className="text-center mb-4">
+        <h1 className="display-5 text-gray">Current Items in store</h1>
+      </div>
+      <div className="row g-4">
+        {products.map((product) => (
+          <div className="col-12 col-sm-6 col-md-4" key={product.id}>
+            <Card className="h-100 shadow-sm">
+              <div className="flex justify-center text-center py-3">
+                <Card.Img
+                  variant="top"
+                  src={product.image}
+                  alt={product.title}
+                  style={{ width: '150px', height: '150px', objectFit: 'contain' }}
+                />
+              </div>
+              <Card.Body>
+                <Card.Title className="text-truncate">{product.title}</Card.Title>
+                <Card.Text className="text-muted">${product.price}</Card.Text>
+              </Card.Body>
+              <Card.Footer className="bg-white text-center">
+                <Button
+                  variant="primary"
+                  onClick={() => addToCart(product)}
+                  className="w-100"
+                >
+                  🛒 Add To Cart
+                </Button>
+              </Card.Footer>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-})
+  );
+};
 
-return (
-  <>
-    <div className='text-center' style={{fontSize: '30px', color: 'gray', fontFamily: 'cursive'}}><h1>Tech accesories</h1></div>
-    <div className='row'>
-      {cards}
-    </div>
-  </>
-)
-
-
-}
-
-
-export default Product
+export default Product;
